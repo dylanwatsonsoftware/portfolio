@@ -1,16 +1,8 @@
-import {
-  Box,
-  Grid,
-  Heading,
-  HStack,
-  Link,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import React, { FC } from "react";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import AvatarImage from "public/images/common/avatar.png";
+import { FC } from "react";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 
 const Page: FC = () => {
   const headingNode = () => {
@@ -51,24 +43,6 @@ const Page: FC = () => {
         <Text fontWeight="bold">
           Computer Science Engineer having interest in web-designing and
           development with an eye for detail.
-        </Text>
-        <Text>
-          I&apos;m also a big fan of{" "}
-          <Box as="span" fontWeight="bold">
-            React.js
-          </Box>{" "}
-          and have{" "}
-          <Box as="span" fontWeight="bold">
-            around 6 years
-          </Box>{" "}
-          experience with it. I have also fiddled with Ruby on Rails and Elixir.
-        </Text>
-        <Text>
-          Though I spend most of my time writing code for building User
-          Interfaces, I&apos;ve also fiddled with many Back-end technologies. I
-          like enjoying working in the intersection of design and development. I
-          feel most productive when I&apos;m able to design User Interfaces
-          which not only look good but has a good performance as well.
         </Text>
       </Box>
     );
@@ -118,16 +92,12 @@ const Page: FC = () => {
   };
 
   return (
-    <Box maxW="2xl" mx="auto" px={4} py={8}>
-      <Grid templateColumns="1fr">
-        <Box as="section">
-          <VStack spacing={4} align="left">
-            {headingNode()}
-            {bioDescriptionNode()}
-            {socialLinksNode()}
-          </VStack>
-        </Box>
-      </Grid>
+    <Box as="main" maxW="2xl" mx="auto" p={8}>
+      <VStack spacing={4} align="left">
+        {headingNode()}
+        {bioDescriptionNode()}
+        {socialLinksNode()}
+      </VStack>
     </Box>
   );
 };

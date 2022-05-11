@@ -55,6 +55,7 @@ const Callout: FC<IProps> = ({ type = "info", children }) => {
             "> p": {
               margin: 0,
               color: theme.colors.gray[200],
+              fontSize: theme.fontSizes.sm,
             },
           }}
         >
