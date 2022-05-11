@@ -6,11 +6,11 @@
   "author": "Nirmalya Ghosh <nirmalya.email@gmail.com>",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "start": "next dev",
     "lint": "next lint",
     "prepare": "husky install",
     "release": "release-it",
-    "start": "next start",
+    "start:prod": "next start",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
