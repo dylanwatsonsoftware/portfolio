@@ -1,9 +1,9 @@
 {
   "private": false,
   "name": "portfolio",
-  "description": "Personal portfolio of Nirmalya Ghosh",
+  "description": "Personal portfolio of Dylan Watson",
   "license": "MIT",
-  "author": "Nirmalya Ghosh <nirmalya.email@gmail.com>",
+  "author": "Dylan Watson <dylanwatsonsoftware@gmail.com>",
   "scripts": {
     "build": "next build",
     "start": "next dev",

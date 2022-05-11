@@ -6,10 +6,10 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/NirmalyaGhosh_">
+  <a href="https://twitter.com/dylanwatsonsw">
     <img
-      alt="Twitter: Nirmalya Ghosh"
-      src="https://img.shields.io/twitter/follow/NirmalyaGhosh_.svg?style=social"
+      alt="Twitter: Dylan Watson"
+      src="https://img.shields.io/twitter/follow/dylanwatsonsw.svg?style=social"
       target="_blank"
     />
   </a>
@@ -35,7 +35,7 @@ This boilerplate is built using the following technologies:
 ### 1. **Clone the application**
 
 ```sh
-git clone git@github.com:ghoshnirmalya/nirmalyaghosh.com.git portfolio
+git clone git@github.com:dylanwatsonsoftware/portfolio.git portfolio
 ```
 
 ### 2. **Install necessary dependencies for the frontend application**

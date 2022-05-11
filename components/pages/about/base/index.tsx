@@ -25,7 +25,7 @@ const Page: FC = () => {
         >
           <Image
             src={AvatarImage}
-            alt="Nirmalya Ghosh"
+            alt="Dylan Watson"
             height={100}
             width={100}
             quality={100}
@@ -36,7 +36,7 @@ const Page: FC = () => {
         <Box>
           <VStack spacing={2} align="left">
             <Heading as="h1" size="lg" color="white">
-              Nirmalya Ghosh
+              Dylan Watson
             </Heading>
             <Text fontWeight="bold">Software Engineer</Text>
           </VStack>
@@ -81,7 +81,7 @@ const Page: FC = () => {
           <Link
             py={2}
             px={4}
-            href="https://github.com/ghoshnirmalya"
+            href="https://github.com/dylanwatsonsoftware"
             rounded="sm"
             bg="#333"
             color="#fff"
@@ -98,7 +98,7 @@ const Page: FC = () => {
           <Link
             py={2}
             px={4}
-            href="https://www.linkedin.com/in/ghoshnirmalya/"
+            href="https://www.linkedin.com/in/dylanwatson/"
             rounded="sm"
             bg="#0e76a8"
             color="#fff"
