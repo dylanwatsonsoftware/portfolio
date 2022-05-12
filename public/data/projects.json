@@ -1,15 +1,14 @@
 [
   {
-    "title": "Portfolio",
-    "description": "A showcase of recent projects",
-    "url": "https://github.com/dylanwatsonsoftware/portfolio",
-    "demoUrl": "https://dylanwatsonsoftware.vercel.app/"
-  },
-  {
     "title": "Thousand Words",
     "description": "Teaching aid to help teachers in assessing reading and writing literacy of primary aged students",
     "url": "https://github.com/dylanwatsonsoftware/thousand-words",
     "demoUrl": "https://thousand-words.vercel.app/"
+  },
+  {
+    "title": "Total Uniforms Order Portal",
+    "description": "An ordering portal that allows allocating quotas to staff of large business to spend on uniforms for the year",
+    "url": "https://www.totaluniforms.com.au/"
   },
   {
     "title": "Pong Extreme",
@@ -28,6 +27,16 @@
     "url": "https://github.com/dylanwatsonsoftware/sharelist"
   },
   {
+    "title": "Resourceful Software",
+    "description": "The landing page for the Resourceful Software Team",
+    "url": "https://www.resourcefulsoftware.com.au/"
+  },
+  {
+    "title": "OMS Dashboard",
+    "description": "The staking page and dashboard for the OMS stablecoin system",
+    "url": "https://app.oms.finance/"
+  },
+  {
     "title": "Juicer",
     "description": "Boilerplate for building applications using Strapi and Next.js",
     "url": "https://github.com/dylanwatsonsoftware/juicer"
@@ -36,5 +45,11 @@
     "title": "AWS Cost Bot",
     "description": "A slack/discord bot that sends the current AWS costs",
     "url": "https://github.com/bwobbones/aws-cost-bot"
+  },
+  {
+    "title": "Portfolio",
+    "description": "This website! A showcase of recent projects",
+    "url": "https://github.com/dylanwatsonsoftware/portfolio",
+    "demoUrl": "https://dylanwatsonsoftware.vercel.app/"
   }
 ]
