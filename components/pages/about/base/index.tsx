@@ -1,6 +1,6 @@
 import { Box, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import AvatarImage from "public/images/common/avatar.png";
+import AvatarImage from "public/images/common/avatar.jpg";
 import { FC } from "react";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 
@@ -21,6 +21,9 @@ const Page: FC = () => {
             height={100}
             width={100}
             quality={100}
+            style={{
+              borderRadius: "50%",
+            }}
             priority
             placeholder="blur"
           />
@@ -41,8 +44,8 @@ const Page: FC = () => {
     return (
       <Box className="article">
         <Text fontWeight="bold">
-          Computer Science Engineer having interest in web-designing and
-          development with an eye for detail.
+          Technical Lead and Software Engineer that likes to build stuff and get
+          it into the hands of users.
         </Text>
       </Box>
     );

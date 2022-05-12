@@ -4,5 +4,11 @@
     "url": "https://dev.to/dylanwatsonsoftware/the-enterprise-devops-mindset-49g2",
     "description": "Learn how to apply a DevOps Mindset, even within an enterprise environment.",
     "date": "2021-04-09"
+  },
+  {
+    "title": "DevOps Coding Practices",
+    "url": "https://dev.to/dylanwatsonsoftware/devops-coding-practices-281e",
+    "description": "A guide to coding practices that help in our journey to progress code into production quickly and safely.",
+    "date": "2021-04-09"
   }
 ]
