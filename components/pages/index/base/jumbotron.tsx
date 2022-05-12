@@ -33,20 +33,21 @@ const Jumbotron: FC = () => {
         >
           I&apos;m a{" "}
           <Box as="span" color="gray.300">
-            Developer
+            Software Engineer
           </Box>
           , who likes{" "}
           <Box as="span" color="gray.300">
-            Designing,{" "}
-          </Box>{" "}
+            designing
+          </Box>
+          , and{" "}
           <Box as="span" color="gray.300">
-            Writing
+            building
           </Box>{" "}
-          and{" "}
+          projects that{" "}
           <Box as="span" color="gray.300">
-            Building Open Source
-          </Box>{" "}
-          projects.
+            excite
+          </Box>
+          !
         </Heading>
       </Box>
     </VStack>
