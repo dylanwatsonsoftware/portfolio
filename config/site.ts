@@ -1,9 +1,9 @@
 const siteConfig = {
   details: {
-    title: "Dylan Watson",
-    tagLine: "Sofware Developer",
+    title: "Dylan Watson - Profile",
+    tagLine: "Technical Lead and Software Engineer",
     description:
-      "Articles and guides about JavaScript, CSS and Web Development from a software engineer.",
+      "Articles and guides about DevOps and Software Development from a software engineer.",
     url: "https://dylanwatsonsoftware.vercel.app",
   },
   assets: {
