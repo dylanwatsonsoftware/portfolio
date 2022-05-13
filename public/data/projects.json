@@ -6,15 +6,19 @@
     "demoUrl": "https://thousand-words.vercel.app/"
   },
   {
+    "title": "Sharelist",
+    "description": "Full-stack application similar to Product Hunt built using Next.js and Hasura",
+    "url": "https://github.com/dylanwatsonsoftware/sharelist"
+  },
+  {
     "title": "Total Uniforms Order Portal",
-    "description": "An ordering portal that allows allocating quotas to staff of large business to spend on uniforms for the year",
+    "description": "An ordering portal that allows allocating quotas to staff of large businesses to spend on uniforms for the year",
     "url": "https://www.totaluniforms.com.au/"
   },
   {
-    "title": "Pong Extreme",
-    "description": "A multiplayer pong game, built in Unity",
-    "url": "https://github.com/dylanwatsonsoftware/pong-extreme",
-    "demoUrl": "http://pong-extreme.vercel.app/"
+    "title": "Lotterywest Interactive Exhibit",
+    "description": "An Interactive Exhibit for Lotterywest using live camera feed data to allow people to interact with the lotto balls on the 45 metre, 360° tower screen.",
+    "url": "https://www.resourcefulsoftware.com.au/"
   },
   {
     "title": "Sociable Unit Tests",
@@ -22,9 +26,15 @@
     "url": "https://github.com/dylanwatsonsoftware/sociable-unit-tests"
   },
   {
-    "title": "Sharelist",
-    "description": "Full-stack application similar to Product Hunt built using Next.js and Hasura",
-    "url": "https://github.com/dylanwatsonsoftware/sharelist"
+    "title": "Mariri Education",
+    "description": "Educational app for children visiting a game reserve in Mozambique.",
+    "url": "https://www.resourcefulsoftware.com.au/"
+  },
+  {
+    "title": "Pong Extreme",
+    "description": "A multiplayer pong game, built in Unity",
+    "url": "https://github.com/dylanwatsonsoftware/pong-extreme",
+    "demoUrl": "http://pong-extreme.vercel.app/"
   },
   {
     "title": "Resourceful Software",
