@@ -48,7 +48,7 @@
   },
   {
     "title": "Juicer",
-    "description": "Boilerplate for building applications using Strapi and Next.js",
+    "description": "Scrape news articles and extract meta data from them",
     "url": "https://github.com/dylanwatsonsoftware/juicer"
   },
   {
