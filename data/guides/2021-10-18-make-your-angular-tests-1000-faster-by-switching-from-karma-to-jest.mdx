@@ -94,14 +94,14 @@ module.exports = {
 
 Create a `setupJest.js` file with a single import (you may add others later):
 
-```
+```javascript
 import "jest-preset-angular/setup-jest";
 ```
 
 Create a `src/tsconfig.test.json` for jest:
 This should be very similar to your main tsconfig, but with jest types added.
 
-```
+```javascript
 {
   "compilerOptions": {
     "baseUrl": "",
@@ -125,7 +125,7 @@ This should be very similar to your main tsconfig, but with jest types added.
 
 If you use `jasmine.createSpy` or `jasmine.createSpyObj`, to aid in the migration, you may need a create-spy.ts:
 
-```
+```javascript
 export function createSpyObj<T>(
   baseName: string | (keyof T)[],
   methodNames?: (keyof T)[]
@@ -154,7 +154,7 @@ Import this where ever you have broken tests (after running the migration script
 
 In order to get jest to actually run, you'll need to create a new test config for karma in your `angular.json` and replace the existing one with jest:
 
-```
+```javascript
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
@@ -174,7 +174,7 @@ From now on, `jest` will run your jest tests and `npm run test-karma` will run t
 
 Your npm test script should now look like this:
 
-```
+```json
 "test": "ng test && npm run test-karma"
 ```
 
@@ -218,7 +218,7 @@ Then just run `node check-progress.js`
 
 Finally, your npm test script should now look like this:
 
-```
+```json
 "test": "ng test && npm run test-karma && node check-progress.js"
 ```
 
