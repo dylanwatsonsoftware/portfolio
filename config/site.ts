@@ -1,9 +1,9 @@
 const siteConfig = {
   details: {
-    title: "Dylan Watson - Profile",
+    title: "Dylan Watson - Portfolio",
     tagLine: "Technical Lead and Software Engineer",
     description:
-      "Articles and guides about DevOps and Software Development from a software engineer.",
+      "Articles and guides about DevOps, Testing and Software Development from a pragmatic software engineer.",
     url: "https://dylanwatsonsoftware.vercel.app",
   },
   assets: {
