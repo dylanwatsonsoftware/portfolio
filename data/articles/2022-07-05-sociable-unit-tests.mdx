@@ -17,7 +17,7 @@ keywords:
 draft: false
 ---
 
-I have been known to complain about how slow and painful to debug SpringBoot integration tests can be. Recently however, I have found an alternative! 😁 A way to reclaim confidence in integration testing, without sacrificing the speed and debug-ability of unit tests.
+I have been known to complain about how slow and painful to debug SpringBoot integration tests can be. Recently, however, I have found an alternative! 😁 A way to reclaim confidence in integration testing, without sacrificing the speed and debug-ability of unit tests.
 
 For the most part, unit tests offer a great alternative to integration tests but sometimes they are not enough. Often it's still important to have a small number of tests that test how your system fits together. For me, sociable unit tests fill this role.
 
@@ -31,22 +31,22 @@ Before we jump in to see what's different about _sociable unit tests_, let's go 
 
 ### Unit Tests
 
-Unit tests are used to verify the behaviour of a small subset of your system - often testing a single class (though not always). In many java code bases (rightly or wrongly), you'll find most of the dependencies of these classes mocked.
+Unit tests are used to verify the behaviour of a small subset of your system - often testing a single class (though not always). In many Java code bases (rightly or wrongly), you'll find most of the dependencies of these classes mocked.
 
 ### Integration
 
-Integration tests are larger in scope than unit tests. They often spin-up a real server but usually only connect to an in-memory database. Any calls to other APIs/services are mocked (If the external services are not mocked, this would be classed as an "end to end" test - not in scope for this article but probably flakey). Integration tests test more of the system than unit tests and are closer (but not exactly) to "production likeness". However, they come at a cost - they are often slower and harder to debug than unit tests. Despite this, they may make it easier to reproduce bugs and prove functionality of a system.
+Integration tests are larger in scope than unit tests. They often spin up a real server but usually only connect to an in-memory database. Any calls to other APIs/services are mocked (If the external services are not mocked, this would be classed as an "end-to-end" test - not in scope for this article but probably flakey). Integration tests test more of the system than unit tests and are closer (but not exactly) to "production likeness". However, they come at a cost - they are often slower and harder to debug than unit tests. Despite this, they may make it easier to reproduce bugs and prove the functionality of a system.
 
 ### Sociable Unit Tests
 
-Sociable Unit Tests are an attempt at a happy medium between unit tests and integration tests. They attempt to test a larger portion of system than unit tests. Like integration tests, the only mocked dependencies should be things outside of the APIs "sphere of influence" - things like network calls or databases I.e API clients or Repository services. Server/Framework/Spring specific code should also be avoided - we really only want to test OUR code.
+Sociable Unit Tests are an attempt at a happy medium between unit tests and integration tests. They attempt to test a larger portion of the system than unit tests. Like integration tests, the only mocked dependencies should be things outside of the APIs "sphere of influence" - things like network calls or databases I.e API clients or Repository services. Server/Framework/Spring specific code should also be avoided - we only want to test OUR code.
 
 ![Sociable vs Solitary Unit Tests](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/56loadbf1f4vscy7iafm.png)
 _A comparison of 2 common styles of unit tests_
 
 ## What are we after?
 
-Basically, we just want our tests to be:
+We just want our tests to be:
 
 - **Fast**
   - This ensures we get fast feedback when we make changes (Think milliseconds)
@@ -111,13 +111,13 @@ class PricingEngine {
 }
 ```
 
-Basically, the ProductService has a PricingEngine which it delegates to, to calculate the price.
+The ProductService has a PricingEngine which it delegates, to calculate the price.
 
 Let's take a look at how we'd test it in both approaches (solitary and sociable).
 
 # Solitary Approach
 
-You will probably recognise the following approach to testing as it has become one of the most popular in recent years. To isolate our system-under-test, we will mock it's dependencies, like so:
+You will probably recognise the following approach to testing as it has become one of the most popular in recent years. To isolate our system-under-test, we will mock its dependencies, like so:
 
 ```java
 // Solitary Unit Test
@@ -129,8 +129,7 @@ public void shouldGetPrice() {
 
   when(engine.calculatePrice(10)).thenReturn(13);
 
-  ProductService productService = new ProductService(engine);
-
+  ProductService productService = new ProductService(engine
   double price = productService.getPriceFor(product);
 
   assertThat(price).isCloseTo(13.0, within(0.1));
@@ -138,9 +137,9 @@ public void shouldGetPrice() {
 }
 ```
 
-But if we actually think about it, the only thing this is testing is that we call a specific method on the engine.
+But if we think about it, the only thing this is testing is that we call a specific method on the engine.
 
-In fact, if we refactor ProductService to call a different (but equivalent) method, our test would fail. Now not all mock-heavy tests are this terrible but it happens far to often.
+If we refactor ProductService to call a different (but equivalent) method, our test would fail. Now not all mock-heavy tests are this terrible but it happens far too often.
 
 Wouldn't it be great if our test continued to pass, so we could prove we haven't broken anything?!
 
@@ -148,7 +147,7 @@ Enter the sociable unit test.
 
 # Sociable Unit Test Approach
 
-The core thing we really want to test is that we can get a price for a given product.. so let's give it another go with that in mind!
+The core thing we want to test is that we can get a price for a given product.. so let's give it another go with that in mind!
 
 ```java
 // Sociable Unit Test
@@ -170,7 +169,7 @@ That's it! A much simpler test.. and it's less sensitive to breakages from struc
 
 # Make a change
 
-Now what if we now add the requirement for our price to include a discount based on the customer?
+What if we now add the requirement for our price to include a discount based on the customer?
 
 We might end up with a change that looks like:
 
@@ -238,12 +237,12 @@ We can see from the above that the required change is just:
 - Pass it to `ProductService#getPriceFor` to fix the compilation error.
 
 Even better, if ProductService already had the info it needed to pass to PricingEngine, the test wouldn't even need updating.
-On a suite of hundreds or thousands of tests, the affect sociable-style tests can have on refactoring is huge!
+On a suite of hundreds or thousands of tests, the effect sociable-style tests can have on refactoring is huge!
 
-Obviously, we'd want to add other tests or assertions for this new functionality but the simple act of using real dependencies in our tests puts us in a much better place from the start.
+We'd want to add other tests or assertions for this new functionality but the simple act of using real dependencies in our tests puts us in a much better place from the start.
 
 # Conclusion
 
-Sociable unit tests are an approach that it works just as well for small scoped unit tests as it does for integration testing whole pieces of a microservice. Whilst you may still find the need to mock external dependencies such as APIs or slow, non-deterministic ones like a database or filesystem, attempting to use more real dependencies in your tests can have a huge impact on both the speed and usefulness of your tests.
+Sociable unit tests are an approach that works just as well for small scoped unit tests as it does for integration testing whole pieces of a microservice. Whilst you may still find the need to mock external dependencies such as APIs or slow, non-deterministic ones like a database or filesystem, attempting to use more real dependencies in your tests can have a huge impact on both the speed and usefulness of your tests.
 
 Give it a go and let me know what you think!
