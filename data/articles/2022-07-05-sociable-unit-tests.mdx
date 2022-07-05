@@ -129,7 +129,7 @@ public void shouldGetPrice() {
 
   when(engine.calculatePrice(10)).thenReturn(13);
 
-  ProductService productService = new ProductService(engine
+  ProductService productService = new ProductService(engine);
   double price = productService.getPriceFor(product);
 
   assertThat(price).isCloseTo(13.0, within(0.1));
