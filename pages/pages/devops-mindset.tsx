@@ -52,7 +52,7 @@ const DDPage: NextPage = () => {
           </VStack>
         </Box>
         <Box as="section" maxW="2xl" mx="auto" w="100%">
-          <UnorderedList>
+          <UnorderedList style={{ textDecoration: "underline" }}>
             <ListItem>
               <Link
                 href="https://docs.google.com/presentation/d/1lHUyePHp0rDEKk4DQFWfvsFfWZwxCigH/edit?usp=sharing&ouid=106172488995628162832&rtpof=true&sd=true"
@@ -66,7 +66,7 @@ const DDPage: NextPage = () => {
                 href="https://dev.to/dylanwatsonsoftware/the-enterprise-devops-mindset-49g2"
                 target="_blank"
               >
-                Part 1: The Enterprise DevOps Mindset
+                DevOps Article - Part 1: The Enterprise DevOps Mindset
               </Link>
             </ListItem>
             <ListItem>
@@ -74,7 +74,7 @@ const DDPage: NextPage = () => {
                 href="https://dev.to/dylanwatsonsoftware/devops-coding-practices-281e"
                 target="_blank"
               >
-                Part 2: DevOps Coding Practices
+                DevOps Article - Part 2: DevOps Coding Practices
               </Link>
             </ListItem>
           </UnorderedList>
