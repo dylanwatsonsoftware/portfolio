@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const DDPage: NextPage = () => {
   return (
@@ -52,10 +53,30 @@ const DDPage: NextPage = () => {
         </Box>
         <Box as="section" maxW="2xl" mx="auto" w="100%">
           <UnorderedList>
-            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-            <ListItem>Consectetur adipiscing elit</ListItem>
-            <ListItem>Integer molestie lorem at massa</ListItem>
-            <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+            <ListItem>
+              <Link
+                href="https://docs.google.com/presentation/d/1lHUyePHp0rDEKk4DQFWfvsFfWZwxCigH/edit?usp=sharing&ouid=106172488995628162832&rtpof=true&sd=true"
+                target="_blank"
+              >
+                Slides
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://dev.to/dylanwatsonsoftware/the-enterprise-devops-mindset-49g2"
+                target="_blank"
+              >
+                Part 1: The Enterprise DevOps Mindset
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://dev.to/dylanwatsonsoftware/devops-coding-practices-281e"
+                target="_blank"
+              >
+                Part 2: DevOps Coding Practices
+              </Link>
+            </ListItem>
           </UnorderedList>
         </Box>
       </VStack>
