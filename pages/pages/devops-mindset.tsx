@@ -62,6 +62,16 @@ const DDPage: NextPage = () => {
               </Link>
             </ListItem>
             <ListItem>
+              <Link href="https://twitter.com/dylanwatsonsw" target="_blank">
+                Twitter - @dylanwatsonsw
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://dev.to/dylanwatsonsoftware" target="_blank">
+                dev.to - @dylanwatsonsoftware
+              </Link>
+            </ListItem>
+            <ListItem>
               <Link
                 href="https://dev.to/dylanwatsonsoftware/the-enterprise-devops-mindset-49g2"
                 target="_blank"
