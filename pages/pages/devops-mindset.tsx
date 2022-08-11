@@ -54,38 +54,49 @@ const DDPage: NextPage = () => {
         <Box as="section" maxW="2xl" mx="auto" w="100%">
           <UnorderedList style={{ textDecoration: "underline" }}>
             <ListItem>
-              <Link
+              <a
                 href="https://docs.google.com/presentation/d/1lHUyePHp0rDEKk4DQFWfvsFfWZwxCigH/edit?usp=sharing&ouid=106172488995628162832&rtpof=true&sd=true"
                 target="_blank"
+                rel="noreferrer"
               >
                 Slides
-              </Link>
+              </a>
             </ListItem>
             <ListItem>
-              <Link href="https://twitter.com/dylanwatsonsw" target="_blank">
+              <a
+                href="https://twitter.com/dylanwatsonsw"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Twitter - @dylanwatsonsw
-              </Link>
+              </a>
             </ListItem>
             <ListItem>
-              <Link href="https://dev.to/dylanwatsonsoftware" target="_blank">
+              <a
+                href="https://dev.to/dylanwatsonsoftware"
+                target="_blank"
+                rel="noreferrer"
+              >
                 dev.to - @dylanwatsonsoftware
-              </Link>
+              </a>
             </ListItem>
             <ListItem>
-              <Link
+              <a
                 href="https://dev.to/dylanwatsonsoftware/the-enterprise-devops-mindset-49g2"
                 target="_blank"
+                rel="noreferrer"
               >
                 DevOps Article - Part 1: The Enterprise DevOps Mindset
-              </Link>
+              </a>
             </ListItem>
             <ListItem>
-              <Link
+              <a
                 href="https://dev.to/dylanwatsonsoftware/devops-coding-practices-281e"
                 target="_blank"
+                rel="noreferrer"
               >
                 DevOps Article - Part 2: DevOps Coding Practices
-              </Link>
+              </a>
             </ListItem>
           </UnorderedList>
         </Box>
