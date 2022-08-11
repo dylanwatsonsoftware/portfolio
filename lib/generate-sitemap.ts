@@ -9,7 +9,7 @@ const globby = require("globby");
     <rss version="2.0">
       <channel>
         <title>Blog by Dylan Watson</title>
-        <link>https://www.nirmalyaghosh.com</link>
+        <link>https://dylanwatsonsoftware.vercel.app</link>
         <description>Personal portfolio of Dylan Watson</description>
         <language>en</language>
         ${pages
@@ -23,7 +23,7 @@ const globby = require("globby");
             return `
               <item>
                 <link>
-                  ${`https://nirmalyaghosh.com${route}`}
+                  ${`https://dylanwatsonsoftware.vercel.app${route}`}
                 </link>
               </item>
             `;
