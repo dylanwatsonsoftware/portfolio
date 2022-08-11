@@ -98,6 +98,15 @@ const DDPage: NextPage = () => {
                 DevOps Article - Part 2: DevOps Coding Practices
               </a>
             </ListItem>
+            <ListItem>
+              <a
+                href="https://www.youtube.com/watch?v=RpaYHByKZ6U&ab_channel=DylanWatson"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Our DevOps Mindset - YouTube (Previous incarnation of this talk)
+              </a>
+            </ListItem>
           </UnorderedList>
         </Box>
       </VStack>
