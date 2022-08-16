@@ -13,9 +13,9 @@ const DDPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Building a DevOps Mindset - DDD Perth 2022</title>
+        <title>Release your inner DevOps - DDD Perth 2022</title>
       </Head>
-      <VStack spacing={32} as="main" p={8}>
+      <VStack spacing={8} as="main" p={8}>
         <Box as="section" maxW="2xl" mx="auto" w="100%">
           <VStack
             spacing={8}
