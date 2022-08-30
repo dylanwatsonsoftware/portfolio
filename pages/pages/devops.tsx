@@ -55,15 +55,6 @@ const DDPage: NextPage = () => {
           <UnorderedList style={{ textDecoration: "underline" }}>
             <ListItem>
               <a
-                href="https://qr.sli.do/5LNf8mQ6HfGmKYrrv6xU63"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Live Q&amp;A - Slido.com
-              </a>
-            </ListItem>
-            <ListItem>
-              <a
                 href="https://docs.google.com/presentation/d/1lHUyePHp0rDEKk4DQFWfvsFfWZwxCigH/edit?usp=sharing&ouid=106172488995628162832&rtpof=true&sd=true"
                 target="_blank"
                 rel="noreferrer"
