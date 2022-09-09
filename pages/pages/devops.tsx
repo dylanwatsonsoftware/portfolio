@@ -65,6 +65,15 @@ const DDPage: NextPage = () => {
             </ListItem>
             <ListItem>
               <a
+                href="https://www.youtube.com/watch?v=2KjEBFAVgoU&list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx&ab_channel=DDDPerth"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Release your inner DevOps - YouTube Livestream
+              </a>
+            </ListItem>
+            <ListItem>
+              <a
                 href="https://twitter.com/dylanwatsonsw"
                 target="_blank"
                 rel="noreferrer"
@@ -78,7 +87,7 @@ const DDPage: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                dev.to - @dylanwatsonsoftware
+                dev.to Articles - @dylanwatsonsoftware
               </a>
             </ListItem>
             <ListItem>
