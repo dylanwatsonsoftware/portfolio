@@ -7,7 +7,8 @@ import {
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
+import MindBlownImage from "public/images/common/Dylan mindblown.png";
 
 const DDPage: NextPage = () => {
   return (
@@ -15,7 +16,7 @@ const DDPage: NextPage = () => {
       <Head>
         <title>Release your inner DevOps - DDD Perth 2022</title>
       </Head>
-      <VStack spacing={32} as="main" p={8}>
+      <VStack spacing={8} as="main" p={8}>
         <Box as="section" maxW="2xl" mx="auto" w="100%">
           <VStack
             spacing={8}
@@ -108,6 +109,18 @@ const DDPage: NextPage = () => {
               </a>
             </ListItem>
           </UnorderedList>
+          <br />
+          <br />
+          <Image
+            src={MindBlownImage}
+            alt="The DevOps Mindset"
+            height={300}
+            width={352}
+            quality={100}
+            objectPosition="right"
+            priority
+            placeholder="blur"
+          />
         </Box>
       </VStack>
     </>
