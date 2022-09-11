@@ -65,7 +65,7 @@ const DDPage: NextPage = () => {
             </ListItem>
             <ListItem>
               <a
-                href="https://www.youtube.com/watch?v=2KjEBFAVgoU&list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx&ab_channel=DDDPerth"
+                href="https://www.youtube.com/watch?v=2KjEBFAVgoU&list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx&ab_channel=DDDPerth&t=4060"
                 target="_blank"
                 rel="noreferrer"
               >
