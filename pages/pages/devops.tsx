@@ -69,7 +69,7 @@ const DDPage: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Release your inner DevOps - YouTube Livestream
+                YouTube - Release your inner DevOps - Livestream
               </a>
             </ListItem>
             <ListItem>
@@ -114,7 +114,7 @@ const DDPage: NextPage = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Our DevOps Mindset - YouTube (Previous incarnation of this talk)
+                YouTube - Our DevOps Mindset (Previous incarnation of this talk)
               </a>
             </ListItem>
           </UnorderedList>
