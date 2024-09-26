@@ -1,0 +1,22 @@
+---
+title: Mac Setup
+slug: mac-setup
+description: My Brain 🧠 dump about things you should do when setting up a new Mac!
+date: "2024-09-26T19:01:25.588Z"
+lastmod: "2024-09-26T16:52:39.297Z"
+draft: false
+tags:
+  - mac
+  - setup
+categories:
+  - mac
+  - setup
+coverImage: "https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.slideshow-medium_2x.jpg"
+githubLink: ""
+keywords:
+  - mac
+  - setup
+  - apple
+---
+
+Just putting a few thoughts down on things you should setup/change/download when you get a new Mac!
