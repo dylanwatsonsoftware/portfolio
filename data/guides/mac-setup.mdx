@@ -20,3 +20,42 @@ keywords:
 ---
 
 Just putting a few thoughts down on things you should setup/change/download when you get a new Mac!
+
+Note that order is important for some things. Particularly ensure OhMyZsh is installed first.
+
+Manually install the following (using the documentation on the respective sites):
+
+- Install OhMyZsh
+- Install Homebrew
+- Install SDKMan
+
+
+- Setup Touch ID
+  - Add fingerprint via settings
+  - System Preferences > Touch ID > Add Fingerprint
+- Install [Scroll Reverser](https://pilotmoon.com/scrollreverser/) (Handy for switching the scroll direction if you have a normal mouse)
+- Install homebrew apps i.e brew install <app>:
+  - gradle
+  - maven
+  - nvm
+    After installing nvm you will likely have to manually add something to your .zshrc - Look for it in the logs
+```
+nvm install node --lts # Install node lts
+corepack enable # enable yarn
+```
+
+  - docker --cask
+  - warp (A sexy terminal)
+  - fork (git GUI)
+  - insomnia (REST GUI - Like Postman)
+  - visual-studio-code
+  - rectangle (Window management)
+- Install IntelliJ Toolbox
+- Install Tenor GIF Keyboard
+- Change the action for the CAPS LOCK key to Escape (Lets be honest, you don’t use Caps Lock except to turn it off after you accidentally pressed it)
+  - System Preferences > Keyboard > Modified Keys
+
+- System Settings > Mouse > Secondary Click > Click Right Side
+- System Settings > Trackpad > Tap to Click
+- System Settings > Trackpad > Secondary Click > Click or Tap with Two Fingers
+- System Settings > Trackpad > More Gestures (Just take note of them as some are very useful)
