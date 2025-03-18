@@ -29,12 +29,17 @@ const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
   }
 
   return (
-    <Box height="100vh" display="flex" alignItems="center" justifyContent="center" backgroundColor={backgroundColor}>
-      <meta httpEquiv="refresh" content="60"></meta>
-      <Text fontSize="2xl" color="white">
-        {statusText}
-      </Text>
-    </Box>
+    <>
+      <Head>
+        <title>{statusText} - Dylan</title>
+      </Head>
+      <Box height="100vh" display="flex" alignItems="center" justifyContent="center" backgroundColor={backgroundColor}>
+        <meta httpEquiv="refresh" content="60"></meta>
+        <Text fontSize="2xl" color="white">
+          {statusText}
+        </Text>
+      </Box>
+    </>
   );
 };
 
