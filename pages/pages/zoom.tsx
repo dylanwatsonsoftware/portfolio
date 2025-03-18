@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import axios from "axios";
+import Head from "next/head";
 
 const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
   let backgroundColor: string;
