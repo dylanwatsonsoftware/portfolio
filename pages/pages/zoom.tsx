@@ -1,8 +1,7 @@
-import { Box, Text } from '@chakra-ui/react';
-import axios from 'axios';
+import { Box, Text } from "@chakra-ui/react";
+import axios from "axios";
 
 const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
-
   let backgroundColor: string;
   let statusText: string;
 
@@ -17,21 +16,21 @@ const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
       break;
     case "maybe":
       backgroundColor = "yellow.500";
-      statusText = "Maybe on a Zoom call";
+      statusText = "Maybe on a Zoom call?";
       break;
     default:
-      backgroundColor = "gray.500";
-      statusText = "Loading...";
+      if (onZoomCall === null) {
+        backgroundColor = "gray.500";
+        statusText = "Loading...";
+      } else {
+        backgroundColor = "yellow.500";
+        statusText = "Error: " + onZoomCall;
+      }
   }
 
   return (
-    <Box
-      height="100vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      backgroundColor={backgroundColor}
-    >
+    <Box height="100vh" display="flex" alignItems="center" justifyContent="center" backgroundColor={backgroundColor}>
+      <meta httpEquiv="refresh" content="30"></meta>
       <Text fontSize="2xl" color="white">
         {statusText}
       </Text>
@@ -50,8 +49,8 @@ export const getServerSideProps = async () => {
     });
     onZoomCall = response.data.value;
   } catch (error) {
-    console.error("Error fetching zoom status:", error);
-    onZoomCall = "maybe";
+    console.log(error);
+    onZoomCall = error.response.data.message ?? error?.message ?? JSON.stringify(error);
   }
 
   return {
