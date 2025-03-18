@@ -7,11 +7,28 @@ KV_API_KEY=<key here>
 store_kv() {
     local key="$1"
     local value="$2"
+    local cache_file="/tmp/store_kv_${key}_cache"
     if [ -z "$key" ] || [ -z "$value" ]; then
         echo "Usage: store_kv <key> <value>"
         return 1
     fi
     echo "Putting $key: $value"
+
+    # Check if the cache file exists and read its contents
+    if [ -f "$cache_file" ]; then
+        # Read the cached key and value
+        read -r cached_key cached_value < "$cache_file"
+        # If the key and value are the same as the cached ones, do nothing
+        if [ "$key" == "$cached_key" ] && [ "$value" == "$cached_value" ]; then
+            echo "Value unchanged, not updating."
+            return 0
+        fi
+    fi
+
+    # Update the cache file with the new key-value pair
+    echo "$key $value" > "$cache_file"
+    
+    # Perform the update as the value has changed
     local collection="ddb"
     local url="https://api.kvstore.io/collections/$collection/items/$key"
     curl --request PUT "$url" \
