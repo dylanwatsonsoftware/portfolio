@@ -1,11 +1,27 @@
-import { useEffect, useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import axios from 'axios';
 
 const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
 
-  if (onZoomCall === null) {
-    return <Text>Loading...</Text>;
+  let backgroundColor: string;
+  let statusText: string;
+
+  switch (onZoomCall) {
+    case "true":
+      backgroundColor = "red.500";
+      statusText = "On a Zoom call";
+      break;
+    case "false":
+      backgroundColor = "green.500";
+      statusText = "Not on a Zoom call";
+      break;
+    case "maybe":
+      backgroundColor = "yellow.500";
+      statusText = "Maybe on a Zoom call";
+      break;
+    default:
+      backgroundColor = "gray.500";
+      statusText = "Loading...";
   }
 
   return (
@@ -14,15 +30,14 @@ const ZoomStatusPage = ({ onZoomCall }: { onZoomCall: string | null }) => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      backgroundColor={onZoomCall ? "red.500" : "green.500"}
+      backgroundColor={backgroundColor}
     >
       <Text fontSize="2xl" color="white">
-        {onZoomCall ? "On a Zoom call" : "Not on a Zoom call"}
+        {statusText}
       </Text>
     </Box>
   );
 };
-
 
 export const getServerSideProps = async () => {
   let onZoomCall = null;
