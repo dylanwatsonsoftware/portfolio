@@ -27,6 +27,10 @@ const PortfolioApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={siteConfig.assets.favicon} type="image/png" />
+        <script
+          async
+          src="https://api.kvstore.io/js/public.js?storage_uuid=bb127902-aaea-470b-86b4-bb130b50a0d8"
+        ></script>
       </Head>
       <NextSeo
         title={`${siteConfig.details.title} - ${siteConfig.details.tagLine}`}
