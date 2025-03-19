@@ -27,7 +27,7 @@ const ZoomReadmePage = () => {
             </Box>
             <Box>
               <Heading as="h2" size="lg" lineHeight="tall" color="gray.500" fontWeight="medium">
-                How to know if I'm on a Zoom call
+                How to know if I&apos;m on a Zoom call
               </Heading>
             </Box>
           </VStack>
@@ -86,7 +86,7 @@ store_kv() {
 if [ "$1" == "--help" ]; then
 	echo "Usage: am-i-on-zoom"
 else
-	if [ $(/usr/sbin/lsof -i 4UDP | /usr/bin/grep zoom | /usr/bin/awk 'END{print NR}') -gt 1 ]; then
+	if [ $(/usr/sbin/lsof -i 4UDP | /usr/bin/grep zoom | /usr/bin/awk &apos;END{print NR}&apos;) -gt 1 ]; then
 		echo "Yes, you are on Zoom"
         store_kv "zoom" "true"
         
