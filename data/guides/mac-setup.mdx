@@ -25,9 +25,10 @@ Note that order is important for some things. Particularly ensure OhMyZsh is ins
 
 Manually install the following (using the documentation on the respective sites):
 
-- Install OhMyZsh
-- Install Homebrew
-- Install SDKMan
+- Install [OhMyZsh](https://ohmyz.sh/)
+  - With power10k theme
+- Install [Homebrew](https://brew.sh/)
+- Install [SDKMan](https://sdkman.io/install)
 
 
 - Setup Touch ID
@@ -37,16 +38,30 @@ Manually install the following (using the documentation on the respective sites)
 - Install homebrew apps i.e brew install \<app\>:
   - gradle
   - maven
-  - nvm
-    - After installing nvm you will likely have to manually add something to your .zshrc (or your dot profile of choice) - Look for ia command in the logs
+  - [meetingbar](https://meetingbar.app/)
+  - fnm (nvm alternative)
+    - After installing fnm and following its instructions for adding to your zshrc add an nvm alias to it:
       ```
-      nvm install node --lts # Install node lts
+      alias nvm="fnm"
+      ```
+    - After installing fnm/nvm you will likely have to manually add something to your .zshrc - Look for it in the logs
+      ```shell
+      nvm install --lts # Install node lts
       corepack enable # enable yarn
       ```
-
   - docker --cask
+  - [fzf](https://github.com/junegunn/fzf)
+    - brew install fzf
+    - Then append this to your ~/.zshrc
+      ```
+      # Set up fzf key bindings and fuzzy completion
+      source <(fzf --zsh)
+      # Bind fzf to Up key
+      bindkey "${key[Up]}" fzf-history-widget
+      ```
   - warp (A sexy terminal)
   - fork (git GUI)
+    - Investigating an alternative: GitButler
   - insomnia (REST GUI - Like Postman)
   - visual-studio-code
   - rectangle (Window management)
@@ -54,14 +69,44 @@ Manually install the following (using the documentation on the respective sites)
   - git
     ```
     brew install git
-    git config --global user.email my.name@atlassian.com
+    git config --global user.email my.name@blah.com
     git config --global user.name "My Name"
     ```
-- Install IntelliJ Toolbox
-- Install Tenor GIF Keyboard
-- Change the action for the CAPS LOCK key to Escape (Lets be honest, you don’t use Caps Lock except to turn it off after you accidentally pressed it)
-  - System Preferences > Keyboard > Modified Keys
+- Install JetBrains Toolbox
+  - Install IntelliJ
+- Setup [Clockwise](https://www.getclockwise.com/login/app) (For the team meeting booking magic and calendar-based slack statuses)
+- (Optional) Install [DisplayLink](https://www.synaptics.com/products/displaylink-graphics/downloads/macos) (For using a dock with multiple monitors)
+- Install [Tenor GIF Keyboard](https://itunes.apple.com/us/app/gif-keyboard/id1043270657)
+  - Slack doesn't have great in-built support for GIFs, so if you miss that, this mostly solves it.
+- Install [Raycast](https://www.raycast.com/)
+  - A powerful Spotlight replacement with extensions, clipboard history, and more
+  - After installation, disable Spotlight shortcut and set Raycast to ⌘+Space:
+    - System Settings > Keyboard > Keyboard Shortcuts > Spotlight > Show Spotlight search (uncheck)
+    - Open Raycast > Preferences > General > Raycast Hotkey > Set to ⌘+Space
+    - Add Raycast Quicklinks as required    
+- Install Arc Browser
 
+# Scripts and Settings
+- Change the action for the CAPS LOCK key to Escape (Lets be honest, you don't use Caps Lock except to turn it off after you accidentally pressed it)
+  - System Preferences > Keyboard > Modified Keys
+- Create a `notify.sh` script that shows notifications when you're on mute or in a Zoom call
+
+**notify.sh script:**
+```bash
+if [ -z "$1" ]; then
+	echo "Usage: notify <message>"
+else
+	if [ $(lsof -i 4UDP | grep zoom | awk 'END{print NR}') -gt 1 ] \
+			|| [ $(osascript -e 'output muted of (get volume settings)') == "true" ] \
+			|| [ $(osascript -e 'output volume of (get volume settings)') -eq 0 ]; then
+		osascript -e "display notification \"$@\" with title \"Silent Say\""
+	else
+		say "$@"
+	fi
+fi
+```
+
+## Mouse & Trackpad Settings
 - System Settings > Mouse > Secondary Click > Click Right Side
 - System Settings > Trackpad > Tap to Click
 - System Settings > Trackpad > Secondary Click > Click or Tap with Two Fingers
