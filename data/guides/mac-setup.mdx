@@ -26,7 +26,21 @@ Note that order is important for some things. Particularly ensure OhMyZsh is ins
 Manually install the following (using the documentation on the respective sites):
 
 - Install [OhMyZsh](https://ohmyz.sh/)
-  - With power10k theme
+  - With [Powerline10k theme](https://github.com/romkatv/powerlevel10k)
+  - Setup Powerline10k:
+    - Use the [Homebrew install guide](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#homebrew)
+    - Restart your terminal and follow the configuration wizard
+    - Install recommended fonts when prompted (MesloLGS NF)
+  - Install useful zsh plugins:
+    ```bash
+    brew install zsh-fast-syntax-highlighting zsh-autosuggestions
+    ```
+    - Add to your `~/.zshrc`:
+    ```bash
+      # Plugins
+      source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+      source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ```
 - Install [Homebrew](https://brew.sh/)
 - Install [SDKMan](https://sdkman.io/install)
 
