@@ -1,14 +1,104 @@
 [
   {
+    "title": "Album DJ",
+    "description": "A nostalgic Spotify album changer: browse your favourites in Cover Flow, load a rotating stack of albums, and tap NFC cards to play them on a Spotify Connect device.",
+    "url": "https://github.com/dylanwatsonsoftware/albumdj",
+    "featured": true,
+    "image": "/images/projects/album-dj.webp",
+    "imageAlt": "Album DJ Cover Flow showing a stack of album artwork with In Rainbows selected",
+    "tags": ["Spotify", "NFC", "JavaScript"],
+    "demoUrl": "https://albumdj.vercel.app"
+  },
+  {
+    "title": "Keepers Photo Organiser",
+    "description": "An Android photo-review prototype that groups similar shots and ranks them on-device, helping you choose the keepers while keeping every photo visible.",
+    "url": "https://github.com/dylanwatsonsoftware/keepers-photo-organiser",
+    "featured": true,
+    "image": "/images/projects/keepers.webp",
+    "imageAlt": "Keepers Photo Organiser app icon",
+    "tags": ["Android", "Java", "ML Kit"],
+    "imageFit": "contain"
+  },
+  {
+    "title": "Floorball Frenzy",
+    "description": "A fast-paced, top-down arcade floorball game for the browser, with touch controls, charged shots, dashes, and multiplayer through shareable links.",
+    "url": "https://github.com/dylanwatsonsoftware/floorball-frenzy",
+    "featured": true,
+    "image": "/images/projects/floorball-frenzy.webp",
+    "imageAlt": "Floorball Frenzy artwork",
+    "tags": ["Phaser", "TypeScript", "Multiplayer"],
+    "demoUrl": "https://floorball-frenzy.vercel.app",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Floorball Frenzy 3D",
+    "description": "A colourful 6v6 arcade floorball game with AI teammates, tactical play, touch controls, and WebRTC multiplayer. Built in Godot for desktop and the web.",
+    "url": "https://github.com/dylanwatsonsoftware/floorball-frenzy-3d",
+    "featured": true,
+    "image": "/images/projects/floorball-frenzy-3d.webp",
+    "imageAlt": "Floorball Frenzy 3D artwork",
+    "tags": ["Godot", "3D", "WebRTC"],
+    "demoUrl": "https://floorball-frenzy-3d.vercel.app/",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Sharelist",
+    "description": "Keep lists of your favourite movies, TV shows, restaurants, podcasts, and more\u2014and share your recommendations with friends.",
+    "url": "https://github.com/dylanwatsonsoftware/sharelist",
+    "featured": true,
+    "image": "/images/projects/sharelist.webp",
+    "imageAlt": "Sharelist artwork",
+    "tags": ["React", "TypeScript", "Firebase"],
+    "demoUrl": "https://share-list.vercel.app",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Kids Say",
+    "description": "Save the funny things your kids say and the little moments you want to remember, with child profiles and ways to rediscover family memories.",
+    "url": "https://kidsays.vercel.app",
+    "featured": true,
+    "image": "/images/projects/kids-say.webp",
+    "imageAlt": "Kids Say laughing monkey app icon",
+    "tags": ["Flutter", "Firebase"],
+    "demoUrl": "https://kidsays.vercel.app",
+    "imageFit": "contain"
+  },
+  {
+    "title": "Yoto AI Toolkit",
+    "description": "A collection of AI skills for discovering audio, preparing Make Your Own playlists, and previewing and publishing them to Yoto, plus a searchable playlist catalogue.",
+    "url": "https://github.com/dylanwatsonsoftware/yoto-ai",
+    "featured": true,
+    "image": "/images/projects/yoto-ai.webp",
+    "imageAlt": "Yoto AI Toolkit interface",
+    "tags": ["AI skills", "TypeScript", "Yoto"],
+    "demoUrl": "https://yoto-myo.vercel.app",
+    "demoLabel": "Browse catalogue"
+  },
+  {
+    "title": "Rottnest Weather",
+    "description": "A map-based snorkelling planner for Rottnest Island, combining wind and swell forecasts with beach rankings and explanations to help choose where to explore.",
+    "url": "https://github.com/dylanwatsonsoftware/rottnest-weather",
+    "featured": true,
+    "image": "/images/projects/rottnest-weather.webp",
+    "imageAlt": "Rottnest Weather interface",
+    "tags": ["SvelteKit", "Leaflet", "Weather data"],
+    "demoUrl": "https://rottnest-weather.vercel.app"
+  },
+  {
+    "title": "Snorkel to the Bottom",
+    "description": "A browser game about a pirate snorkeller diving for treasure, collecting air, and exploring beneath the waves. Built with Phaser.",
+    "url": "https://github.com/dylanwatsonsoftware/snorkel-to-the-bottom",
+    "featured": true,
+    "image": "/images/projects/snorkel-to-the-bottom.webp",
+    "imageAlt": "Snorkel to the Bottom interface",
+    "tags": ["Phaser", "JavaScript", "Game"],
+    "demoUrl": "https://snorkel-to-the-bottom.vercel.app"
+  },
+  {
     "title": "Thousand Words",
     "description": "Teaching aid to help teachers in assessing reading and writing literacy of primary aged students",
     "url": "https://github.com/dylanwatsonsoftware/thousand-words",
     "demoUrl": "https://thousand-words.vercel.app/"
-  },
-  {
-    "title": "Sharelist",
-    "description": "Keep track of lists of your favourite things and share them with your friends! Movies, TV Shows, Restaurants, Podcasts.. whatever you want!",
-    "url": "https://github.com/dylanwatsonsoftware/sharelist"
   },
   {
     "title": "Total Uniforms Order Portal",
@@ -17,7 +107,7 @@
   },
   {
     "title": "Lotterywest Interactive Exhibit",
-    "description": "An Interactive Exhibit for Lotterywest using live camera feed data to allow people to interact with the lotto balls on the 45 metre, 360° tower screen.",
+    "description": "An Interactive Exhibit for Lotterywest using live camera feed data to allow people to interact with the lotto balls on the 45 metre, 360\u00b0 tower screen.",
     "url": "https://www.resourcefulsoftware.com.au/"
   },
   {

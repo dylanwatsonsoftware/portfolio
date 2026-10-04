@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       articles: articles.slice(0, 5),
-      projects: projects.slice(0, 5),
+      projects: projects.filter((project) => project.featured),
     },
   };
 };

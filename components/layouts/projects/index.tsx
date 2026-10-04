@@ -1,99 +1,25 @@
-import { Box, Button, Grid, Heading, Text, VStack } from "@chakra-ui/react";
-import { FC, useState } from "react";
+import { Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import ProjectCard from "components/project-card";
+import { FC } from "react";
 import Project from "types/project";
 
-interface Props {
-  projects: Project[];
-}
-
-const Projects: FC<Props> = ({ projects = [] }) => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const sortedProjects = projects.filter((project: Project) =>
-    project.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const headingNode = () => {
-    return (
-      <Box>
-        <VStack spacing={2} align="left">
-          <Heading as="h1" size="lg" color="white">
-            Projects
-          </Heading>
-          <Text>Open Source Projects developed and available on Github</Text>
-        </VStack>
-      </Box>
-    );
-  };
-
-  const titleNode = (title: string) => {
-    return (
-      <Heading as="h3" size="md" lineHeight="tall" color="blue.400">
-        {title}
+const Projects: FC<{ projects: Project[] }> = ({ projects = [] }) => (
+  <VStack spacing={8} align="stretch">
+    <VStack spacing={3} align="stretch">
+      <Heading as="h1" size="2xl" color="white">
+        Projects
       </Heading>
-    );
-  };
-
-  const descriptionNode = (description: string) => {
-    return <Text color="gray.400">{description}</Text>;
-  };
-
-  const projectsNode = () => {
-    if (!sortedProjects.length) {
-      return (
-        <VStack mx="auto" textAlign="center" w="100%">
-          <Text>No projects found!</Text>
-        </VStack>
-      );
-    }
-
-    return (
-      <Grid
-        templateColumns={[
-          "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
-          "repeat(2, 1fr)",
-          "repeat(3, 1fr)",
-        ]}
-        gap={8}
-      >
-        {sortedProjects.map((project: Project, index: number) => {
-          return (
-            <Box
-              key={index}
-              bg="gray.900"
-              color="white"
-              rounded="sm"
-              borderWidth={1}
-              borderColor="gray.700"
-            >
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <Box p={8}>
-                  <VStack
-                    spacing={4}
-                    minH={24}
-                    justifyContent="space-between"
-                    align="left"
-                  >
-                    <VStack spacing={1} align="left">
-                      {titleNode(project.title)}
-                      {descriptionNode(project.description)}
-                    </VStack>
-                  </VStack>
-                </Box>
-              </a>
-            </Box>
-          );
-        })}
-      </Grid>
-    );
-  };
-
-  return (
-    <VStack spacing={8} align="left">
-      {headingNode()}
-      {projectsNode()}
+      <Text color="gray.400">
+        A collection of apps, games, experiments, and client work.
+      </Text>
     </VStack>
-  );
-};
+    <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+      {projects.map((project) => (
+        <ProjectCard key={project.title} project={project} />
+      ))}
+    </SimpleGrid>
+    {!projects.length && <Text color="gray.400">No projects found!</Text>}
+  </VStack>
+);
 
 export default Projects;
